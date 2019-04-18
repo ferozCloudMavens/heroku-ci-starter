@@ -2,13 +2,14 @@ const chai = require('chai'),
   chaiHttp = require('chai-http'),
   expect = chai.expect;
 
+const host = `http://${HEROKU_APP_NAME}.herokuapp.com`;
 chai.use(chaiHttp);
 
 describe('User controller tests', () => {
   describe('Get verb tests', () => {
     it('should return a list of items because db always has some data', done => {
       chai
-        .request(process.env.URL)
+        .request(host)
         .get('/api/user')
         .end(function(err, res) {
           expect(res).to.have.status(200);
