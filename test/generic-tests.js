@@ -26,7 +26,7 @@ describe('Generic tests', () => {
             done();
         });
   });
-  it('should load files correctly', done => {
+  it('should load records correctly', done => {
     // prettier-ignore
     chai.request(app)
         .get('/api/user')

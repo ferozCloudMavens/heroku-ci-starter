@@ -18,7 +18,7 @@
       ]
     },
     "scripts": {
-      "postdeploy": "./setupDb.sh"
+      "postdeploy": "psql $HEROKU_POSTGRESQL_ORANGE -f seed.sql"
     }
   }
 }

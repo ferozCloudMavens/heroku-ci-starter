@@ -1,7 +1,4 @@
-#connect to db
-heroku pg:psql HEROKU_POSTGRESQL_ORANGE
-
-#setup table
+-- setup table
 -- Table: public.users
 
 -- DROP TABLE public.users;
@@ -20,5 +17,5 @@ WITH (
 )
 TABLESPACE pg_default;
 
-#add data
+-- add data
 INSERT INTO public.users(first_name, last_name) VALUES('Mya','Colslav');
