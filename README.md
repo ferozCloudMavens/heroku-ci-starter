@@ -1,4 +1,4 @@
-# travis-ci added to restful-express-starter
+# heroku-ci added to restful-express-starter
 
 Starter project for RESTful api with Express
 
