@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "mocha --exit",
+    "test": "nyc mocha --exit",
     "docs:build": "documentation build src/** -f md -o docs"
   },
   "keywords": [
