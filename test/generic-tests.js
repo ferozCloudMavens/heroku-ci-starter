@@ -8,6 +8,7 @@ if (dotEnvPath) {
   console.log('dotEnvPath');
   require('dotenv').config({ path: dotEnvPath });
 }
+process.env.TEST = true;
 
 const app = require('../app');
 
