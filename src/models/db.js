@@ -2,15 +2,9 @@ const Sequelize = require('sequelize');
 
 let sequelize;
 
-if (process.env.TEST) {
-  sequelize = new Sequelize(process.env.HEROKU_POSTGRESQL_ORANGE, {
-    dialect: 'postgres'
-  });
-} else {
-  sequelize = new Sequelize(process.env.DATABASE_URL, {
-    dialect: 'postgres'
-  });
-}
+sequelize = new Sequelize(process.env.DATABASE_URL, {
+  dialect: 'postgres'
+});
 
 /**
  * @example

@@ -7,17 +7,10 @@
           "options": {
             "version": "10"
           }
-        },
-        {
-          "plan": "heroku-postgresql",
-          "as": "HEROKU_POSTGRESQL_ORANGE",
-          "options": {
-            "version": "10"
-          }
         }
       ],
       "scripts": {
-        "test-setup": "psql $HEROKU_POSTGRESQL_ORANGE -f seed.sql"
+        "test-setup": "psql $DATABASE_URL -f seed.sql"
       }
     }
   }
