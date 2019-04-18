@@ -3,10 +3,18 @@
     "test": {
       "addons": [
         {
-          "plan": "heroku-postgresql:in-dyno",
-          "as": "HEROKU_POSTGRESQL_ORANGE"
+          "plan": "heroku-postgresql",
+          "as": "HEROKU_POSTGRESQL_ORANGE",
+          "options": {
+            "version": "10.0"
+          }
         },
-        "heroku-postgresql:in-dyno"
+        {
+          "plan": "heroku-postgresql",
+          "options": {
+            "version": "10.0"
+          }
+        }
       ]
     }
   }
