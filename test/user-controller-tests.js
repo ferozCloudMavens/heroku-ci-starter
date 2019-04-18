@@ -2,7 +2,7 @@ const chai = require('chai'),
   chaiHttp = require('chai-http'),
   expect = chai.expect;
 
-const host = `http://${HEROKU_APP_NAME}.herokuapp.com`;
+const host = `http://${process.env.HEROKU_APP_NAME}.herokuapp.com`;
 chai.use(chaiHttp);
 
 describe('User controller tests', () => {
