@@ -1,0 +1,13 @@
+{
+  "environments": {
+    "test": {
+      "addons": [
+        {
+          "plan": "heroku-postgresql:in-dyno",
+          "as": "HEROKU_POSTGRESQL_ORANGE"
+        },
+        "heroku-postgresql:in-dyno"
+      ]
+    }
+  }
+}
