@@ -2,14 +2,13 @@ const chai = require('chai'),
   chaiHttp = require('chai-http'),
   expect = chai.expect;
 
-const host = 'http://127.0.0.1:5000';
 chai.use(chaiHttp);
 
 describe('User controller tests', () => {
   describe('Get verb tests', () => {
     it('should return a list of items because db always has some data', done => {
       chai
-        .request(host)
+        .request(process.env.URL)
         .get('/api/user')
         .end(function(err, res) {
           expect(res).to.have.status(200);
