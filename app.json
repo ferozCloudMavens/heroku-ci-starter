@@ -11,7 +11,6 @@
       ]
     },
     "scripts": {
-      "postdeploy": "psql $DATABASE_URL -f seed.sql",
       "test-setup": "psql $DATABASE_URL -f seed.sql"
     }
   }
