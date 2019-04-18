@@ -16,7 +16,7 @@ const app = require('../app');
 chai.use(chaiHttp);
 
 describe('Generic tests', () => {
-  it('app should load correctly', done => {
+  it('should load app correctly', done => {
     // prettier-ignore
     chai.request(app)
         .get('/')
@@ -26,7 +26,7 @@ describe('Generic tests', () => {
             done();
         });
   });
-  it('files should load correctly', done => {
+  it('should load files correctly', done => {
     // prettier-ignore
     chai.request(app)
         .get('/api/user')
