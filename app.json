@@ -4,13 +4,6 @@
       "addons": [
         {
           "plan": "heroku-postgresql",
-          "as": "HEROKU_POSTGRESQL_ORANGE",
-          "options": {
-            "version": "10"
-          }
-        },
-        {
-          "plan": "heroku-postgresql",
           "options": {
             "version": "10"
           }
@@ -18,7 +11,7 @@
       ]
     },
     "scripts": {
-      "postdeploy": "psql $HEROKU_POSTGRESQL_ORANGE -f seed.sql"
+      "postdeploy": "psql $DATABASE_URL -f seed.sql"
     }
   }
 }
