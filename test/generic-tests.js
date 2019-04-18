@@ -4,7 +4,9 @@ const chai = require('chai'),
 const path = require('path');
 const dotEnvPath = path.resolve('./.env');
 
-require('dotenv').config({ path: dotEnvPath });
+if (dotEnvPath) {
+  require('dotenv').config({ path: dotEnvPath });
+}
 process.env.TEST = true;
 
 const app = require('../app');
