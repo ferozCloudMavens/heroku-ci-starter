@@ -5,9 +5,11 @@ const path = require('path');
 const dotEnvPath = path.resolve('./.env');
 
 if (dotEnvPath) {
+  console.log('dotEnvPath');
   require('dotenv').config({ path: dotEnvPath });
 }
 process.env.TEST = true;
+console.log('test', process.env.TEST);
 
 const app = require('../app');
 
